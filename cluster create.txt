@@ -1,0 +1,21 @@
+eksctl create cluster --name=ekscvwebapp \
+  --version 1.31 \
+  --region=us-east-1 \
+  --zones=us-east-1a,us-east-1b \
+  --nodegroup-name ng-default \
+  --node-type t3.medium \
+  --nodes 2 \
+  --managed
+  
+  eksctl delete cluster --name=ekscvwebapp --region us-east-1
+ 
+ 
+1. purchase domain godaddy (nswamy.xyz) and 
+2.create certificate in aws ACM add CNAME name(_be521de3de034a435ba9a374a6995991) & CNAME value (_c7bc9d866de254d851939b0337a7a4cd.zfyfvmchrl.acm-validations.aws.)  wait for Status Issued
+3.Launch EC2 small instance with new key pair & IAM create user with Adminaccess & install & Kubectl & ekctl & Docker 
+4.create EKS cluster using ekctl command
+5.login Ec2 small instance verify
+6.run kubectl apply -f .
+7. verify all services are created or not(kubectl get all)
+8.route53 create hosted zone add ns in godaddy ns list then create new record with alias load balancer
+9.verify URL on browser

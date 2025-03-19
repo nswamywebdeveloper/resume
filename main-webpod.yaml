@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp
+  labels:
+    app: html-webapp
+spec:
+   containers:
+   - name: html-webapp
+     image: nswamy9214/cv-web-app:latest
+     ports:
+       - containerPort: 80

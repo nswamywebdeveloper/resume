@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  labels: 
+    app: html-webapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: html-webapp
+  template:
+    metadata:
+      labels:
+        app: html-webapp
+    spec:
+      containers:
+      - name: html-webapp
+        image: nswamy9214/cv-web-app:latest
+        imagePullPolicy: Always
+        ports:
+        - name: wproapp-port
+          containerPort: 80
