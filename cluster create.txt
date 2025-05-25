@@ -20,3 +20,9 @@ eksctl create cluster --name=ekscvwebapp \
 7. verify all services are created or not(kubectl get all)
 8.route53 create hosted zone add ns in godaddy ns list then create new record with alias load balancer
 9.verify URL on browser
+
+
+docker build -t my-new-cv .
+docker image ls
+docker ps
+docker run -d -p 80:80 my-new-cv
