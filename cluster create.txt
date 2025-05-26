@@ -18,7 +18,7 @@ eksctl create cluster --name=ekscvwebapp \
 6. git clone git@github.com:nswamywebdeveloper/resume.git
 6.goto resume folder the run kubectl apply -f .
 7. verify all services are created or not(kubectl get all)
-8.route53 create hosted zone add ns in godaddy ns list then create new record with alias load balancer
+8.route53 create hosted zone add ns in godaddy ns list then create new record with alias load balancer & create CloudFront Distributions with load balancer and under SSL certificate section type your domain and create Distributions then only work https 
 9.verify URL on browser
 
 
