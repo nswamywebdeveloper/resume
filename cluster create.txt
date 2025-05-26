@@ -1,5 +1,5 @@
 eksctl create cluster --name=ekscvwebapp \
-  --version 1.31 \
+  --version 1.32 \
   --region=us-east-1 \
   --zones=us-east-1a,us-east-1b \
   --nodegroup-name ng-default \
